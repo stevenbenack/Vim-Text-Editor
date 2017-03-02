@@ -53,5 +53,13 @@ int buffer_read(buffer_t * buf, const char * name) {
 			buffer_append(buf, 1); 
 		}
 	}
+	else {
+		//if can't open file, open new buffer
+		//TODO change options if can't open
+		line_t* l = line_create(NULL, 0);
+		buffer_append(buf, l);
+		buf->line = l;
+	}
+	//file does not exist
+	return 0;
 }
-//test
