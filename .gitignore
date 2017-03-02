@@ -81,3 +81,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+#VC
+*.VC.opendb
+*.VC.db
