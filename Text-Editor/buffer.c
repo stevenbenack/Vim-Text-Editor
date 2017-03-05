@@ -167,3 +167,26 @@ void buffer_erase(buffer_t * buf, line_t * line)
 	line_free(line);
 }
 
+/**
+* Clears all lines in the buffer
+* @param buf buffer to clear lines from
+*/
+void buffer_clear(buffer_t * buf)
+{
+	if(!buf) return;
+
+	line_t* l = buf->beg;
+	while (l) {
+		line_t* next = l->next; 
+		line_free(l);
+		l = next_l; 
+	}
+
+	buf->size = 0;
+	buf->row = 0;
+	buf->col = 0;
+	buf->line = NULL;
+	buf->beg = NULL;
+	buf->end = NULL;
+}
+
