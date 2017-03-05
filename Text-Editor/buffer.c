@@ -128,3 +128,20 @@ void buffer_prepend(buffer_t * buf, line_t * line)
 	buf->size++;
 }
 
+/**
+* Inster a line at a position in the buffer
+* @param buf  Buffer to insert into
+* @param dest Line to insert
+* @param line Line to append to
+*/
+void buffer_insert(buffer_t * buf, line_t * dest, line_t * line)
+{
+	line->next = dest;
+	line->prev = dest->prev;
+	if(line->next)
+		line->next->prev = line; 
+	if(line->prev)
+		line->prev->next = line; 
+	buf->size++;
+}
+
