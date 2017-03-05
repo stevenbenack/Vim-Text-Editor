@@ -90,3 +90,23 @@ int buffer_write(buffer_t * buf, const char * name)
 	return 0;
 }
 
+/**
+* Appends a line to a buffer
+* @param buf  Buffer to append to
+* @param line Line to append
+*/
+void buffer_append(buffer_t * buf, line_t * line)
+{
+	//either append to buffer (linked list) 
+	//or create new
+	if (buf->end) {
+		line->prev = buf->end;
+		line->prev->next = line; 
+		buf->end = line;
+	}
+	else {
+		buf->beg = buf->end = line; 
+	}
+	buf->size++;
+}
+
