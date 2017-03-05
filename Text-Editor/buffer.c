@@ -110,3 +110,21 @@ void buffer_append(buffer_t * buf, line_t * line)
 	buf->size++;
 }
 
+/**
+* Prepend a line to a buffer
+* @param buf  Buffer to prepend to
+* @param line Line to prepend
+*/
+void buffer_prepend(buffer_t * buf, line_t * line)
+{
+	if (buf->beg) {
+		line->next = buf->beg; 
+		line->next->prev = line;
+		buf->beg = line;
+	}
+	else {
+		buf->beg = buf->end = line; 
+	}
+	buf->size++;
+}
+
