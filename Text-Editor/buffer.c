@@ -145,3 +145,25 @@ void buffer_insert(buffer_t * buf, line_t * dest, line_t * line)
 	buf->size++;
 }
 
+/**
+* Erases a line in a buffer
+* @param buf  buffer to erase line from
+* @param line line to erase
+*/
+void buffer_erase(buffer_t * buf, line_t * line)
+{
+	//edge cases
+	if(line == buf->beg)
+		buf->beg = line->next;
+	else 
+		line->prev->next = line->next;
+
+	if(line == buf->end)
+		buf->end = line->prev;
+	else 
+		line->next->prev = line->prev;
+
+	buf->size--;
+	line_free(line);
+}
+
