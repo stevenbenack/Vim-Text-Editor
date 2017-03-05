@@ -63,3 +63,30 @@ int buffer_read(buffer_t * buf, const char * name) {
 	//file does not exist
 	return 0;
 }
+
+/**
+* Writes the contents of a buffer into a file
+* @param  buf  buffer to write to a file
+* @param  name name of the file to write (can be null)
+* @return 0 if success, 2 if could not write
+*/
+int buffer_write(buffer_t * buf, const char * name)
+{
+	FILE *fp;
+
+	//if the file name exists, write to file, 
+	//else create new buf with said name
+	if (name) fp = fopen(name, "w");
+	else fp = fopen(buf->name, "w");
+
+	if(fp){
+		for(line_t* l = buf->beg; l != NULL; l = l->next)
+			//write to file
+			fprint(fp, "%s\n", l->str);
+
+		fclose(fp);
+		return 1;
+	}
+	return 0;
+}
+
