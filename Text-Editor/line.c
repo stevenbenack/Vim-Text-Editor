@@ -29,3 +29,56 @@ void line_free(line_t * line)
 	line->next = NULL;
 	free(line);
 }
+
+/*
+* line_concat(): Concatinates the given line with the provided string
+*
+* return: void
+*
+* line_t* line	Line to concatinate to
+* const char* str	String to append/concatinate to the line
+* size_t length    Length of provided string
+*/
+void line_concat(line_t * line, const char * str, size_t length)
+{
+	strncat(line->str, str, length);
+}
+
+/*
+* line_insert(): Inserts a character at the provided position in to the
+*  given line
+*
+* return: void
+*
+* line_t* line    Line to insert a character in
+* char chr		Character to insert into the line
+* size_t idx	Index of the line to insert the character into
+*/
+void line_insert(line_t * line, char chr, size_t idx)
+{
+	//insert line to middle of string
+	if (idx < strlen(line->str)) {
+		char* split = line->str + idx;
+		//move memory
+		memmove(split +1, split, strlen(split));
+	}
+	line->str[idx] = chr; 
+}
+
+/*
+* line_erase(): Erases a character at the provided position in to the
+*  given line
+*
+* return: void
+*
+* line_t* line		Line to erase a character in
+* size_t idx		Index of the character to erase
+*/
+void line_delete(line_t * line, size_t idx)
+{
+	//move the string to write over to delete
+	if (idx < strlen(line->str)) {
+		char* split = line->str + idx;
+		memmove(split, split +1, strlen(split));
+	}
+}
