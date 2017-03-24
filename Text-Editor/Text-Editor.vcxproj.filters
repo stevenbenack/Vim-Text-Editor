@@ -17,12 +17,18 @@
     <ClInclude Include="line.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="str.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="buffer.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="line.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="str.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

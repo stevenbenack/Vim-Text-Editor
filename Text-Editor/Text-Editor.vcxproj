@@ -148,10 +148,12 @@
   <ItemGroup>
     <ClInclude Include="buffer.h" />
     <ClInclude Include="line.h" />
+    <ClInclude Include="str.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="buffer.c" />
     <ClCompile Include="line.c" />
+    <ClCompile Include="str.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
