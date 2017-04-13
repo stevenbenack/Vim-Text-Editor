@@ -20,6 +20,18 @@
     <ClInclude Include="str.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="editor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cmd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="buffer.c">
@@ -29,6 +41,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="str.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="editor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cmd.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

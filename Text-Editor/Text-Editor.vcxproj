@@ -147,11 +147,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="buffer.h" />
+    <ClInclude Include="cmd.h" />
+    <ClInclude Include="editor.h" />
+    <ClInclude Include="window.h" />
+    <ClInclude Include="types.h" />
     <ClInclude Include="line.h" />
     <ClInclude Include="str.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="buffer.c" />
+    <ClCompile Include="cmd.c" />
+    <ClCompile Include="editor.c" />
     <ClCompile Include="line.c" />
     <ClCompile Include="str.c" />
   </ItemGroup>

@@ -10,14 +10,14 @@
 #include <string.h>
 
 typedef struct buffer_t {
-	char* name;
+	char*			name;
 	struct buffer_t *prev;
 	struct buffer_t *next;
-	line_t* line;
-	line_t* beg;
-	line_t* end;
-	size_t size;
-	size_t col, row;
+	line_t*			line;
+	line_t*			beg;
+	line_t*			end;
+	size_t			size;
+	size_t			col, row;
 } buffer_t;
 
 /**
