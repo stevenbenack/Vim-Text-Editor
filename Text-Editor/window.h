@@ -5,7 +5,7 @@
 
 //define window
 typedef struct window_t {
-	WINDOW*		win
+	WINDOW*		win;			//from ncurses
 	size_t		cols, rows;
 	size_t		top, bottom; 
 };

@@ -1,0 +1,29 @@
+﻿  str.c
+  main.c
+  line.c
+c:\users\steven\documents\github\text-editor\text-editor\line.c(15): warning C4047: 'return': 'line_t *' differs in levels of indirection from 'int'
+c:\users\steven\documents\github\text-editor\text-editor\line.c(14): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(346): note: see declaration of 'strncpy'
+c:\users\steven\documents\github\text-editor\text-editor\line.c(44): error C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: see declaration of 'strncat'
+  editor.c
+c:\users\steven\documents\github\text-editor\text-editor\window.h(4): fatal error C1083: Cannot open include file: 'ncurses.h': No such file or directory
+  cmd.c
+  buffer.c
+c:\users\steven\documents\github\text-editor\text-editor\buffer.c(11): error C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(552): note: see declaration of 'strdup'
+c:\users\steven\documents\github\text-editor\text-editor\buffer.c(40): warning C4090: 'function': different 'const' qualifiers
+c:\users\steven\documents\github\text-editor\text-editor\buffer.c(53): warning C4047: 'function': 'line_t *' differs in levels of indirection from 'int'
+c:\users\steven\documents\github\text-editor\text-editor\buffer.c(53): warning C4024: 'buffer_append': different types for formal and actual parameter 2
+c:\users\steven\documents\github\text-editor\text-editor\buffer.c(44): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\steven\documents\github\text-editor\text-editor\buffer.c(45): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\steven\documents\github\text-editor\text-editor\buffer.c(85): warning C4013: 'fprint' undefined; assuming extern returning int
+c:\users\steven\documents\github\text-editor\text-editor\buffer.c(79): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\steven\documents\github\text-editor\text-editor\buffer.c(80): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\steven\documents\github\text-editor\text-editor\buffer.c(182): error C2065: 'next_l': undeclared identifier
+c:\users\steven\documents\github\text-editor\text-editor\buffer.c(182): warning C4047: '=': 'line_t *' differs in levels of indirection from 'int'
+  Generating Code...
