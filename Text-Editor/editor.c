@@ -25,3 +25,5 @@ static cmd_t normal_mode_cmds[] = {
 	{'\0', NULL, NORMAL }
 };
 
+
+
